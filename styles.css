@@ -1,0 +1,271 @@
+/* Basic CSS file for Sprout & Grow website */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fefae0; 
+    color: #283618; 
+}
+
+header {
+    background-color: #ccd5ae; 
+    color: #283618;
+    text-align: center;
+    padding: 10px 0;
+    font-family: Lucida Console, sans-serif;
+    font-size: 30px;
+}
+
+/* --- Fluid Logo Styling --- */
+.logo {
+    width: 40%;          
+    max-width: 300px;   
+    min-width: 150px;   
+    height: auto;       
+    display: block;
+    margin: 10px auto;  
+}
+
+/* --- Fluid Navigation Menu --- */
+nav ul {
+    list-style-type: none; 
+    padding: 0;
+    margin: 15px 0 5px 0;
+    display: flex;         
+    flex-wrap: wrap;       
+    justify-content: center; 
+    gap: 15px;             
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    color: #283618; 
+    text-decoration: underline; 
+    padding: 8px 16px;     
+    font-weight: bold;
+    display: block;
+}
+
+nav a:hover {
+    background-color: #606c38; 
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+/* --- Main Framework & Layout Margins --- */
+main {
+    padding: 20px 0; 
+    text-align: center;
+}
+
+.fluid-wrapper {
+    display: flex;
+    flex-wrap: wrap;   
+    gap: 20px;         
+    max-width: 1200px; 
+    margin: 0 10%;  /* Fulfills page margin requirements of 10% */
+    text-align: left; 
+}
+
+.primary-content {
+    flex: 1 1 65%;    
+    min-width: 300px;  
+}
+
+.sidebar {
+    flex: 1 1 25%;     
+    min-width: 250px; 
+    background-color: #ccd5ae; 
+    padding: 25px;
+    border-radius: 4px;
+}
+
+/* --- Fluid Content Image with Text Wrap --- */
+.content-image {
+    float: left;          
+    width: 40%;           
+    max-width: 400px;     
+    max-height: 400px;    
+    height: auto;         
+    margin-right: 20px;   
+    margin-bottom: 15px;  
+    border-radius: 4px;   
+}
+
+.primary-content::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* --- External & Internal Link Styling --- */
+.external-resource a, .home-back-link a {
+    color: #283618; 
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.external-resource a:hover, .home-back-link a:hover {
+    color: #606c38;
+}
+
+.home-back-link {
+    margin-top: 30px;
+    font-size: 1.1rem;
+}
+
+/* --- Sidebar Call-to-Action Link & Buttons --- */
+.cta-button {
+    display: inline-block;
+    background-color: #283618; 
+    color: #fefae0;            
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-top: 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: #606c38;
+}
+
+/* --- Universal Fluid Image Baseline --- */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- Advanced Footer Setup --- */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; 
+    margin-top: 40px;
+    padding: 20px 0;
+    font-size: 0.9rem;
+    background-color: #283618; 
+    color: #fefae0;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px; 
+}
+
+.social-icon {
+    width: 24px;         
+    height: 24px;        
+    object-fit: contain; 
+    opacity: 0.9;        
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.social-icon:hover {
+    opacity: 1;          
+    transform: scale(1.1); 
+}
+
+/* ==========================================================================
+   ADDED FORM FORMATTING STYLES 
+   (Keeps your event registration cohesive with your earth-tone branding!)
+   ========================================================================== */
+
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #283618;
+}
+
+/* Fluid styling for Text Fields, Select Lists, and Text Areas */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group select,
+.form-group textarea {
+    padding: 11px;
+    border: 2px solid #606c38;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: #ffffff;
+    color: #283618;
+    width: 100%;
+    box-sizing: border-box; /* Crucial for fluid layout resizing */
+}
+
+/* Focus highlighting for accessibility */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: 2px solid #283618;
+    background-color: #fcfdf5;
+}
+
+/* Custom styles for the Fieldsets around Radios and Checkboxes */
+.form-fieldset {
+    border: 2px solid #606c38;
+    border-radius: 5px;
+    padding: 15px 20px;
+    margin: 5px 0;
+    background-color: #fcfcf0; /* Cream background box to blend into body color */
+}
+
+.form-fieldset legend {
+    font-weight: bold;
+    padding: 0 8px;
+    color: #283618;
+}
+
+/* Stack options neatly with decent spacing */
+.radio-checkbox-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.radio-checkbox-option:last-child {
+    margin-bottom: 0;
+}
+
+.radio-checkbox-option input[type="radio"],
+.radio-checkbox-option input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.radio-checkbox-option label {
+    cursor: pointer;
+    font-weight: normal;
+}
+
+/* Align and style submit button dynamically */
+.submit-btn {
+    align-self: flex-start;
+    padding: 12px 25px;
+    font-size: 1.05rem;
+}

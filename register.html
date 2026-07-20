@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register for Events | Sprout &amp; Grow</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Consistent Header & Navigation Area -->
+    <header>
+        <img src="sprout-grow-horizontal-524-transparent.png" alt="Sprout and Grow typography brand logo featuring a central green seedling inside a droplet" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="events.html">Events</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="fluid-wrapper">
+            
+            <article class="primary-content">
+                <h1>Event Registration</h1>
+                <p>Fill out the form below to secure your spot in our upcoming workshops.</p>
+                
+                <!-- Semantic HTML5 Form -->
+                <form action="#" method="post" class="registration-form">
+                    
+                    <!-- Text Box 1 -->
+                    <div class="form-group">
+                        <label for="fullName">Full Name:</label>
+                        <input type="text" id="fullName" name="fullName" required placeholder="John Doe">
+                    </div>
+                    
+                    <!-- Text Box 2 -->
+                    <div class="form-group">
+                        <label for="emailAddress">Email Address:</label>
+                        <input type="email" id="emailAddress" name="emailAddress" required placeholder="example@domain.com">
+                    </div>
+
+                    <!-- Text Box 3 -->
+                    <div class="form-group">
+                        <label for="phoneNumber">Phone Number:</label>
+                        <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="(123) 456-7890">
+                    </div>
+                    
+                    <!-- Drop Down Selection List -->
+                    <div class="form-group">
+                        <label for="workshopSelect">Choose an Event:</label>
+                        <select id="workshopSelect" name="workshopSelect" required>
+                            <option value="" disabled selected>-- Select an Event --</option>
+                            <option value="container-gardening">Seasonal Container Gardening (July 25)</option>
+                            <option value="kitchen-herbs">Herbs 101: Kitchen Windowsills (Aug 5)</option>
+                            <option value="soil-prep">Soil Preparation Essentials (Sept 12)</option>
+                        </select>
+                    </div>
+
+                    <!-- Tandem Radio Buttons (operating together via share "experience" name) -->
+                    <fieldset class="form-fieldset">
+                        <legend>Your Gardening Experience Level:</legend>
+                        <div class="radio-checkbox-option">
+                            <input type="radio" id="experienceBeginner" name="experience" value="beginner" checked>
+                            <label for="experienceBeginner">Beginner</label>
+                        </div>
+                        <div class="radio-checkbox-option">
+                            <input type="radio" id="experiencePro" name="experience" value="experienced">
+                            <label for="experiencePro">Experienced</label>
+                        </div>
+                    </fieldset>
+
+                    <!-- Checkboxes (3 Options) -->
+                    <fieldset class="form-fieldset">
+                        <legend>What topics interest you most? (Select all that apply):</legend>
+                        <div class="radio-checkbox-option">
+                            <input type="checkbox" id="interestFlowers" name="interests" value="flowers">
+                            <label for="interestFlowers">Flowering Ornamentals</label>
+                        </div>
+                        <div class="radio-checkbox-option">
+                            <input type="checkbox" id="interestVeg" name="interests" value="vegetables">
+                            <label for="interestVeg">Edible Gardening &amp; Vegetables</label>
+                        </div>
+                        <div class="radio-checkbox-option">
+                            <input type="checkbox" id="interestLandscape" name="interests" value="landscaping">
+                            <label for="interestLandscape">Native Yard Landscaping</label>
+                        </div>
+                    </fieldset>
+
+                    <!-- Text Area -->
+                    <div class="form-group">
+                        <label for="comments">Special Accommodations / Questions:</label>
+                        <textarea id="comments" name="comments" rows="4" placeholder="Any specific topics or accessibility accommodations?"></textarea>
+                    </div>
+                    
+                    <!-- Submit Button -->
+                    <button type="submit" class="cta-button submit-btn">Submit Registration</button>
+                </form>
+
+                <!-- Requirement: Direct navigation link back to the homepage -->
+                <p class="home-back-link">
+                    &larr; <a href="index.html">Back to Home Page</a>
+                </p>
+            </article>
+
+            <!-- Sidebar Area -->
+            <aside class="sidebar">
+                <h2>Why Join?</h2>
+                <p>All Sprout &amp; Grow workshops are guided by local certified horticulturists. Registration includes organic soil samples and seed starter packages.</p>
+            </aside>
+            
+        </div>
+    </main>
+
+    <!-- Consistent Footer Area -->
+    <footer>
+        <p>&copy; 2026 Sprout &amp; Grow. All rights reserved.</p>
+        
+        <div class="social-links">
+            <a href="https://www.facebook.com/login/" title="Login to Facebook">
+                <img src="facebook-logo.png" alt="Facebook Login Page" class="social-icon">
+            </a>
+            <a href="https://x.com/i/flow/login" title="Login to X">
+                <img src="x-logo.png" alt="X Login Page" class="social-icon">
+            </a>
+        </div>
+    </footer>
+
+</body>
+</html>
